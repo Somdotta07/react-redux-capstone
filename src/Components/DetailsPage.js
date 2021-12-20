@@ -6,7 +6,6 @@ export default function DetailsPage() {
   let confirmed;
   let critical;
   let deaths;
-  let calculated;
 
   const fetchInfo = detailsList.map((cases) => {
     if (cases.code === window.location.pathname.slice(1)) {
@@ -22,14 +21,16 @@ export default function DetailsPage() {
     { fetchInfo },
       <div>
         <div>
-          <p className="updated data"> Today&apos;s Update</p>
-          <div className="data">
-            <span>Death:</span>
-            <span>{deaths}</span>
-          </div>
+          <p className="updated data">
+            <span>Statistics:</span>
+          </p>
           <div className="data">
             <span>Population:</span>
             <span>{population}</span>
+          </div>
+          <div className="data">
+            <span>Death:</span>
+            <span>{deaths}</span>
           </div>
           <div className="data">
             <span>Confirmed Cases:</span>
@@ -38,10 +39,6 @@ export default function DetailsPage() {
           <div className="data">
             <span>Critical:</span>
             <span>{critical}</span>
-          </div>
-          <div className="data">
-            <span>Statistics:</span>
-            <span>{calculated}</span>
           </div>
         </div>
       </div>

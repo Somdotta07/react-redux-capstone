@@ -2,27 +2,18 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
-import { addCovidCases } from '../Redux/home/home';
+import { getData } from '../Redux/home/home';
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const covidLists = useSelector((state) => state.covidReducer);
-
-  const getData = () => (dispatch) => {
-    fetch('https://corona-api.com/countries')
-      .then((res) => res.json())
-      .then((data) => data.data.forEach((cases) => {
-        dispatch(addCovidCases(cases));
-      }));
-  };
-
+  const countryLists = useSelector((state) => state.covidReducer);
   useEffect(() => {
-    if (covidLists.length === 0) {
+    if (countryLists.length === 0) {
       dispatch(getData());
     }
   }, []);
 
-  const covidCases = covidLists.map((cases) => (
+  const covidCases = countryLists.map((cases) => (
     <div className="country-name" id="country-n" key={cases.code}>
       <div className="country-c">
         <Link className="country-d" to={`/${cases.code}`}>
