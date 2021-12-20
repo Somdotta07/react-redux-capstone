@@ -3,7 +3,7 @@ import React from 'react'
 export default function DetailsPage() {
     return (
         <div>
-            Details
+           <h2> Under construction</h2>
         </div>
     )
 }
