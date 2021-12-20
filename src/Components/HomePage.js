@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa';
 import { addCovidCases } from '../Redux/home/home';
 
 const HomePage = () => {
@@ -16,13 +17,13 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    if (!covidLists.length) {
+    if (covidLists.length === 0) {
       dispatch(getData());
     }
   }, []);
 
   const covidCases = covidLists.map((cases) => (
-    <div className="country-name" id="country-name" key={cases.code}>
+    <div className="country-name" id="country-n" key={cases.code}>
       <div className="country-c">
         <Link className="country-d" to={`/${cases.code}`}>
           {cases.name}
@@ -35,10 +36,27 @@ const HomePage = () => {
     </div>
   ));
 
+  const searchCountry = () => {
+    let inputText = '';
+    const userInput = document.getElementById('input-country');
+    const filterCountry = userInput.value.toUpperCase();
+    const countryDetails = document.getElementsByClassName('country-name');
+    [...countryDetails].forEach((country) => {
+      const temp = country;
+      inputText = temp.textContent || temp.innerText;
+      if (inputText.toUpperCase().indexOf(filterCountry) > -1) {
+        temp.style.display = '';
+      } else {
+        temp.style.display = 'none';
+      }
+    });
+  };
+
   return (
     <>
       <div className="country-name">Active Corona Cases </div>
-      <input className="search" type="text" id="input-country" placeholder="Country name.." />
+      <input className="search" type="text" id="input-country" placeholder="Country name.." onKeyDown={searchCountry} />
+      <div className="search-icon"><FaSearch /></div>
       <div className="countries-con">
         {covidCases}
       </div>
