@@ -89,8 +89,8 @@ h3 {
   }
 
 .country-name {
-  height: 50vh;
-  width: 50vw;
+  height: 20vh;
+  width: 45vw;
   background-color: var(--primary-color);
   background-image: url(./Common/imageedit_4_5887518972.jpg);
   background-repeat: no-repeat;
