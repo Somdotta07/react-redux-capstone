@@ -2,7 +2,7 @@
  :root{
    --primary-color: rgb(223, 37, 74);
    --secondary-color:  rgb(214, 126, 143);
-   --place-color: #c4c4c4;
+   --place-color: #fff;
  }
 * {
   box-sizing: border-box;
@@ -32,8 +32,41 @@ h3 {
   margin-left: 80px;
 }
 
+.line-1{
+  color: #fff;
+  overflow: hidden;
+  border-right: 0.15em solid orangered;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(30, end) infinite,
+    cursor-blink 0.75s step-end infinite;   
+}
+
+/* Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes cursor-blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orangered;
+  }
+}
+
+
 .main-c {
   background-color: burlywood;
+  background-image: url(./Common/corona-5090522_1280.jpg);
 }
 
 .country-heading {
@@ -56,21 +89,55 @@ h3 {
   }
 
 .country-name {
+  height: 50vh;
+  width: 50vw;
   background-color: var(--primary-color);
+  background-image: url(./Common/imageedit_4_5887518972.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 5px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+  transition: width 2s;
+ }
+ .country-name:hover {
+  width: 300px;
+ }
 
 .country-d {
   color: var(--place-color);
+  font-size: 16px;
+  font-weight: 800;
   text-decoration: none;
 }
 .recovered {
   color: var(--place-color);
   font-size: 0.8em;
+  overflow:hidden;
+}
+
+.recovered >div> div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+.recovered div:first-child {
+  animation: show 5s linear infinite;
+}
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
 }
 
 #input-country{
@@ -100,12 +167,12 @@ h3 {
 }
 
 .data {
+  display: flex;
+  justify-content: space-between;
   background-color:var(--secondary-color);
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
   color: #fff;
   font-weight: bold;
 }

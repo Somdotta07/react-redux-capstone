@@ -20,8 +20,10 @@ const HomePage = () => {
         </Link>
       </div>
       <div className="recovered">
-        Recovered:&nbsp;
-        {cases.latest_data.recovered}
+        <div>
+          Recovered:&nbsp;
+          {cases.latest_data.recovered}
+        </div>
       </div>
     </div>
   ));
@@ -44,7 +46,10 @@ const HomePage = () => {
 
   return (
     <div className="main-c">
-      <div className="country-heading">Active Corona Cases </div>
+      <div className="country-heading">
+        <h2 className="line-1 anim-typewriter">Active Corona Cases</h2>
+        {' '}
+      </div>
 
       <input className="search" type="text" id="input-country" placeholder="Country name.." onKeyDown={searchCountry} />
 

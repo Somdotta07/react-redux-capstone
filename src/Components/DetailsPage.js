@@ -19,7 +19,7 @@ export default function DetailsPage() {
 
   return (
     { fetchInfo },
-      <div>
+      <div className="main-c">
         <div>
           <p className="updated-data">
             <span className="title">Statistics:</span>
