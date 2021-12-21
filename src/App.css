@@ -7,18 +7,101 @@
   font-family: 'Lato', sans-serif;
 }
 
-/* header {
-  height: 100vh;
-} */
-
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: rgb(74, 74, 243);
+  background-color: #376093;
+  align-items: center;
 }
 
 .lessThan {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+h3 {
+  margin-left: 40px;
+}
+.mic {
+  margin-left: 80px;
+}
+
+.main-c {
+  background-color: burlywood;
+}
+
+.country-heading {
+  background-color: #376093;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 3px 10px;
+  letter-spacing: 0.5px;
+}
+
+.countries-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #227eed;
+  padding: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-top: 50px;
+}
+
+.country-name {
+  background-color: #398ff0;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.country-d {
+  color: #fff;
+  text-decoration: none;
+}
+.recovered {
+  color: #376093;
+  font-size: 0.8em;
+}
+
+#input-country{
+  width: 100%;
+  padding: 5px;
+  padding-right: 40px;
+  outline: none;
+  border: 2px solid #999999;
+  border-radius: 5px;
+  background-color: #FBFBFB;
+  font-family: Cambria, Cochin, Georgia, serif;
+  font-size: 16px;
+  background-position: right;
+  background-image: url('./Common/search.png');
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.title {
+  display: block;
+  background-color: #376093;
+  color: #fff;
+  font-weight: bold;
+  padding: 3px 10px;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+}
+
+.data {
+  background-color: #398ff0;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: bold;
 }

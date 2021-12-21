@@ -21,8 +21,8 @@ export default function DetailsPage() {
     { fetchInfo },
       <div>
         <div>
-          <p className="updated data">
-            <span>Statistics:</span>
+          <p className="updated-data">
+            <span className="title">Statistics:</span>
           </p>
           <div className="data">
             <span>Population:</span>

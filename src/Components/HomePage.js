@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa';
 import { getData } from '../Redux/home/home';
 
 const HomePage = () => {
@@ -20,7 +19,7 @@ const HomePage = () => {
           {cases.name}
         </Link>
       </div>
-      <div className="latest-cases">
+      <div className="recovered">
         Recovered:&nbsp;
         {cases.latest_data.recovered}
       </div>
@@ -44,14 +43,15 @@ const HomePage = () => {
   };
 
   return (
-    <>
-      <div className="country-name">Active Corona Cases </div>
+    <div className="main-c">
+      <div className="country-heading">Active Corona Cases </div>
+
       <input className="search" type="text" id="input-country" placeholder="Country name.." onKeyDown={searchCountry} />
-      <div className="search-icon"><FaSearch /></div>
+
       <div className="countries-con">
         {covidCases}
       </div>
-    </>
+    </div>
 
   );
 };
