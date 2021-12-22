@@ -6,7 +6,8 @@ We will select an API that provides numeric data about a topic that you like and
  - one page with a list of items that could be filtered by some parameters; This page should be your homepage.
  - one page for the item details; 
 ## Screenshots
-
+## Video
+  [https://www.loom.com/share/0974707d842541e5953a8248acaa1ee8]
 ## Built With
 - React-Redux
 - CSS3
