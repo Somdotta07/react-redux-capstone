@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render components render HomePage 1`] = `
+<div
+  className="main-c"
+>
+  <div
+    className="country-heading"
+  >
+    <h2
+      className="line-1 anim-typewriter"
+    >
+      Active Corona Cases 
+    </h2>
+  </div>
+  <input
+    className="search"
+    id="input-country"
+    onKeyDown={[Function]}
+    placeholder="Country name.."
+    type="text"
+  />
+  <div
+    className="countries-con"
+  />
+</div>
+`;
