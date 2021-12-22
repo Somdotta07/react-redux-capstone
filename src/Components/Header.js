@@ -7,7 +7,7 @@ export default function Header() {
     <div className="header">
       <nav className="nav">
         <div className="lessThan">
-          <Link to="/"><FaLessThan /></Link>
+          <Link to="/"><FaLessThan className="sign" /></Link>
           <h1 className="logo">2021</h1>
         </div>
 

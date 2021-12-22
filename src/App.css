@@ -23,8 +23,12 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* margin-top: 10px; */
 }
 
+.sign {
+  margin-top: 5px;
+}
 h3 {
   margin-left: 40px;
 }
@@ -33,7 +37,7 @@ h3 {
 }
 
 .line-1{
-  color: #fff;
+  color:var(--primary-color);
   overflow: hidden;
   border-right: 0.15em solid orangered;
   white-space: nowrap;
@@ -65,13 +69,20 @@ h3 {
 
 
 .main-c {
-  background-color: burlywood;
+  height: 100vh;
   background-image: url(./Common/corona-5090522_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
 }
 
 .country-heading {
-  background-color: var(--primary-color);
-  color: var(--place-color);
+  height: 25vh;
+  background-image: url(./Common/who_share.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   font-size: 0.8em;
   font-weight: bold;
   padding: 3px 10px;
@@ -175,4 +186,52 @@ h3 {
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
+}
+
+.details-country {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  background-color:var(--secondary-color);
+  background-image: url(./Common/imageedit_1_7542201164.jpg);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.name {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: rgb(234, 241, 227);
+  border: 5px solid #f1f1f1;
+  animation: growth 3s;
+  animation-fill-mode: backwards;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 2;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 2px 2px var(--primary-color);
+  overflow-x: hidden;
+}
+
+@keyframes growth {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 10px;
+  }
 }
