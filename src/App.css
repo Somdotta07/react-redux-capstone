@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+:root {
+  --primary-color: rgb(223, 37, 74);
+  --secondary-color: rgb(214, 126, 143);
+  --place-color: #fff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,18 +13,236 @@
   font-family: 'Lato', sans-serif;
 }
 
-/* header {
-  height: 100vh;
-} */
-
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: rgb(74, 74, 243);
+  background-color: var(--primary-color);
+  align-items: center;
 }
 
 .lessThan {
   display: flex;
   flex-direction: row;
+  align-items: center;
+
+  /* margin-top: 10px; */
+}
+
+.sign {
+  margin-top: 5px;
+}
+
+h3 {
+  margin-left: 40px;
+}
+
+.mic {
+  margin-left: 80px;
+}
+
+.line-1 {
+  color: var(--primary-color);
+  overflow: hidden;
+  border-right: 0.15em solid orangered;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation:
+    typing 3.5s steps(30, end) infinite,
+    cursor-blink 0.75s step-end infinite;
+}
+
+/* Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes cursor-blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: orangered;
+  }
+}
+
+.main-c {
+  height: 100vh;
+  background-image: url(./Common/corona-5090522_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+}
+
+.country-heading {
+  height: 25vh;
+  background-image: url(./Common/who_share.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 3px 10px;
+  letter-spacing: 0.5px;
+}
+
+.countries-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-top: 50px;
+}
+
+.country-name {
+  height: 20vh;
+  width: 45vw;
+  background-color: var(--primary-color);
+  background-image: url(./Common/imageedit_4_5887518972.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 2s;
+}
+
+.country-name:hover {
+  width: 300px;
+}
+
+.country-d {
+  color: var(--place-color);
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.recovered {
+  color: var(--place-color);
+  font-size: 0.8em;
+  overflow: hidden;
+}
+
+.recovered > div > div {
+  color: #fff;
+  padding: 4px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+.recovered div:first-child {
+  animation: show 5s linear infinite;
+}
+
+@keyframes show {
+  0% { margin-top: -270px; }
+  5% { margin-top: -180px; }
+  33% { margin-top: -180px; }
+  38% { margin-top: -90px; }
+  66% { margin-top: -90px; }
+  71% { margin-top: 0; }
+  99.99% { margin-top: 0; }
+  100% { margin-top: -270px; }
+}
+
+#input-country {
+  width: 100%;
+  padding: 5px;
+  padding-right: 40px;
+  outline: none;
+  border: 2px solid #999;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  font-family: Cambria, Cochin, Georgia, serif;
+  font-size: 16px;
+  background-position: right;
+  background-image: url('./Common/search.png');
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.title {
+  display: block;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  padding: 3px 10px;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.details-country {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  background-image: url(./Common/imageedit_1_7542201164.jpg);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.name {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgb(234, 241, 227);
+  border: 5px solid #f1f1f1;
+  animation: growth 3s;
+  animation-fill-mode: backwards;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 2;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 2px 2px var(--primary-color);
+  overflow-x: hidden;
+}
+
+@keyframes growth {
+  0% {
+    font-size: 0;
+  }
+
+  100% {
+    font-size: 10px;
+  }
 }
