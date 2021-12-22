@@ -21,8 +21,9 @@ We will select an API that provides numeric data about a topic that you like and
 - Gitflow
 - Visual Studio Code
 ## Live Demo
-- [github](https://somdotta07.github.io/react-redux-capstone/)
 - [netlify](https://determined-aryabhata-b6bc71.netlify.app)
+- [github](https://somdotta07.github.io/react-redux-capstone/)
+
 
 ## Getting Started
 
@@ -37,8 +38,8 @@ We will select an API that provides numeric data about a topic that you like and
 
 - to create a React application is using Create React App (CRA) and following the instructions in this [guide](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)
 ```
-npx create-react-app bookstore-react
-cd bookstore-react
+npx create-react-app react-redux-capstone
+cd react-redux-capstone
 npm start
 ```
 -  Add React Redux
