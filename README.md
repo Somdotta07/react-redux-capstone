@@ -11,7 +11,8 @@ We will select an API that provides numeric data about a topic that you like and
 - Details Page
 ![localhost_3000_(Moto G4) (1)](https://user-images.githubusercontent.com/84907743/147141452-c74d070f-1399-48b6-a61c-9f4ac66e6554.png)
 ## Video
-   [Link](https://www.loom.com/share/0974707d842541e5953a8248acaa1ee8)
+   - [Link](https://www.loom.com/share/0974707d842541e5953a8248acaa1ee8)
+   - [Special feature](https://www.loom.com/share/abff33fd2b5e4237938ab7c630be80b1)
 ## Built With
 - React-Redux
 - CSS3
